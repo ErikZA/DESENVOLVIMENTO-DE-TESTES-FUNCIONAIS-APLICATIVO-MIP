@@ -1,0 +1,145 @@
+% METODOLOGIA------------------------------------------------------------------
+
+\chapter{PROPOSTA}
+\label{chap:metodologia}
+
+Nesta seção são apresentadas as tecnologias, ferramentas necessárias, os requisitos e  classes a serem testadas  do aplicativo.
+
+\section{Manejo Integrado de Pragas (MIP)}
+        
+O MIP tem como objetivo criar uma ferramenta capaz de auxiliar o constante monitoramento da lavoura, buscando manter a presença de pragas e doenças sempre abaixo do nível de dano à cultura, a estratégia não é eliminar completamento os agentes causadores de dano, mas reduzi-los a um ponto em que seus inimigos naturais presentes na plantação haajam sobre suas presas, favorecendo o equilíbrio natural desfeito pela plantação e pelo uso de defensores agrícolas. Para atingir seu objetivo a ferramenta depende de coletas de dados semanais coletados através da metodologia do pano-de-batida\footnote{Técnica de coleta pragas em lavouras.} para acompanhar o nível populacional das principais pragas da lavoura. 
+
+
+O sistema de coleta e análise de dados do MIP auxilia no acompanhamento das atividades de coleta e análise de dados das lavouras monitoradas pelo EMATER. O sistema também permite o gerenciamento de dados relacionados à coleta, como macrorregiões, regiões, produtores, safras, técnicos e pragas. 
+
+% Para atingir esse objetivo esta ferramenta irá criar e administrar um banco de dados que possibilitará armazenar todas as informações necessárias para o gerenciamento interno de cada unidade e suas respectivas particularidades. Além de fornecer acesso a aplicação através da comunicação cliente servidor\footnote{Estrutura de aplicação distribuída que distribui as tarefas e cargas de trabalho entre os fornecedores de um recurso, e os requerentes dos recursos.}. 
+
+
+
+\section{MODELO DO SISTEMA}
+Nesta seção, serão apresentados os requisitos funcionas e os principais artefatos gerados para o desenvolvimento da aplicação.
+
+\subsection{Requisitos Funcionais}
+Os requisitos são exigências, solicitações, desejos e necessidades que um software deve materializar. A Tabela \ref{tabela-requisitos} identifica os requisitos funcionais de forma abrangente.  
+
+\input{dados/tabelas/tabelaRequisitos.tex}
+
+\subsection{Especificação dos Requisitos Funcionais}
+
+A Tabela \ref{especificacaoDosRequisitos} apresenta a descrição dos requisitos funcionais de forma detalhada, como deverão ser executados e quais exceções que impedem a sua execução. Os requisitos especificados que foram identificados devem ser testados e validados. 
+
+\input{dados/tabelas/tabelaDescricaoDosRequisitos.tex}
+
+ 
+
+\begin{figure}[!h]
+
+\subsection{Diagramas de Classes}
+
+A Figura \ref{domain-base} representa as classes relacionadas a base do sistema. Funcionalidades de gerenciamento são apresentadas neste diagrama.
+	\includegraphics[scale=0.35]{dados/figuras/domain-base-classes.png}
+	\caption{Diagram de Classes Bases do Sistema.}
+	FONTE: \cite[https:~//github.com/gabrielcostasilva/emater-mip-datacollection-app/tree/DDDLike/mip/src/main/resources/UMLDiagrams]{gabriel}
+	\label{domain-base}
+\end{figure}
+
+
+\begin{landscape}
+A FIGURA \ref{domain-survey} representa as classes relacionadas ao domínio das funcionalidades de pesquisa. No contexto da engenharia de software domínio de um sistema representa um conjunto de sistemas ou áreas que se comportam de forma similar.
+
+\begin{figure}[h!]
+	\includegraphics[scale=0.3]{dados/figuras/domain-survey-classes.png}
+	\caption{Diagram de Classes Domínio da Pesquisa.}
+	FONTE: \cite[https:~//github.com/gabrielcostasilva/emater-mip-datacollection-app/tree/DDDLike/mip/src/main/resources/UMLDiagrams]{gabriel}
+	\label{domain-survey}
+\end{figure}
+\end{landscape}
+
+
+
+A FIGURA \ref{domain-pest} representa as classes relacionadas a coleta de dados sobre pragas. Funcionalidades de gerenciamento de pragas são apresentadas neste diagrama. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.35]{dados/figuras/domain-mip-classes.png}
+	\caption{Diagram de Classes Gerenciamento de Pragas.} 
+	FONTE: \cite[https:~//github.com/gabrielcostasilva/emater-mip-datacollection-app/tree/DDDLike/mip/src/main/resources/UMLDiagrams]{gabriel}
+	\label{domain-pest}
+\end{figure}
+
+
+
+\section{TECNOLOGIA JAVA}
+
+O Java é uma linguagem de programação e plataforma computacional orientada a objetos lançada pela primeira vez pela Sun Microsystems em 1995 e posteriormente adquirida pela ORACLE. Diferente das linguagens de programação convencionais, que são compiladas para código nativo o Java é compilada para um \textit{bytecode}\footnote{Conjunto de instruções projetada para execução eficiente por um interpretador de software. } que é interpretado por uma JVM \cite{Java}. A linguagem Java foi projetada para possuir portabilidade independente de plataforma, e segurança de rede, implementando restrições de execução.
+
+\section{FERRAMENTAS}
+
+A seguir, as ferramentas que serão utilizados no desenvolvimento dos
+testes do sistema.
+
+\subsection{JUnit}
+
+O  \textit{JUnit} é um \textit{framework} para plataforma Java que possibilita a criação de classes de teste unitário. Por se tratar de uma ferramenta bastante difundida possui integração com diversas plataformas e IDEs. Além de tudo, ele é um projeto \textit{opensource}\footnote{Software de código aberto produzido de forma publica e colaborativa ou liberado sob uma licença na qual o detentor dos direitos autorais concede aos usuários os direitos para estudar, alterar e distribuir o software.} e permite a que os teste sejam automatizados com apresentação de resultados. Os testes podem ser elaborados a partir dos requisitos do sistema ou casos de uso. 
+
+
+Mais informações podem ser encontradas no capítulo 2 deste trabalho.
+
+\subsection{Mockito}
+
+O Mockito e um \textit{framework} de código aberto orientado a comportamento. Ele possibilita a simulação de comportamento de classes e interfaces facilitando a criação de testes que dependem de funcionalidades que ainda não foram implementadas. A ferramenta e bem difundida e possui integração com diferentes plataformas e IDEs. 
+
+Mais informações podem ser encontradas no capítulo 2 deste trabalho.
+
+\subsection{Spring Boot Test}
+
+ Spring é um framework de código aberto, criado por Rod Johnson e possui o módulo de inicialização rápida, Spring Boot que é um projeto para facilitar o processo de configuração e publicação de aplicações \cite{spring}. O \textit{Spring Boot Test}  fornece suporte a testes de integração de forma fácil e simples. Através de anotações que o \textit{framework} disponibiliza e possível inicializar uma interface de conexão com o banco de dados permitindo a realização de testes de persistência e recuperação de dados.
+
+
+Mais informações podem ser encontradas no capítulo 2 deste trabalho.
+
+\subsection{IntelliJ IDEA}
+
+O ambiente de desenvolvimento integrado IntelliJ IDEA, desenvolvido pela JetBrains e um programa  para desenvolvimento de \textit{software} em varias linguagens que suporta várias tecnologias e \textit{frameworks}. O Intellij possui um decompilador\footnote{Realiza a operação inversa de um compilador, transformando código objeto em código fonte.}, que permite debugar\footnote{Método para procurar um erro em um trecho de código.} o código interno de classes desenvolvidas e códigos externo de bibliotecas que não possuem fonte. Ele também conta com recursos de conexão a banco de dados o que permite criar, alterar e excluir registros. Além de contar com a pesquisa rápida que permite a visualização e previsão de resultados, facilitando a interação com classes, bibliotecas e \textit{frameworks} \cite{intellij}.
+
+
+\section{MÉTODO}
+
+O sistema de Manejo Integrado de Pragas e Doenças deverá ser submetido a testes de unidade, integração e aceitação. Os testes de unidade avaliarão isoladamente o banco de dados, as interfaces de comunicação, e todos os outros componentes do projeto. Os testes de integração testaram os componentes, previamente testados isoladamente, acoplados. O objetivo é identificar possíveis falhas nos acoplamentos. 
+
+
+O processo de teste deve se basear em uma metodologia compatível com o processo de desenvolvimento e deve ser o guia básico para organizar a atividade de teste da aplicação. 
+
+
+\subsection{Modelo 3P x 3E}
+
+O modelo proposto é composto por diversas fases e etapas sendo duas em paralelo e quatro em sequência. As etapas em paralelo representam a preparação e o planejamento que devem estar presentes no projeto dês de sua concepção e fornece suporte para as demais etapas do processo. Procedimentos iniciais representam a menor parte do processo, a maior parte do processo deve se dedicar as etapas de especificação, execução e entrega \cite{riosMoreira}. A FIGURA \ref{modelo3p3e} apresenta o modelo.
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=3.5]{dados/figuras/modelo3px3e.png}
+	\caption{Modelo 3P x 3E do ciclo de vida do processo de teste.}FONTE: \cite{riosMoreira}
+	\label{modelo3p3e}
+\end{figure}
+
+
+
+A primeira etapa “Procedimentos iniciais” propõe a análise e verificação dos requisitos para garantir que estes estejam completos e sem ambiguidades. Além disso o procedimento inicial deve conter as atividades que serão executadas ao longo de todo o desenvolvimento dos testes.
+
+
+A segunda etapa de “Especificação” consiste em elaboração de casos de teste e elaboração de roteiros de teste. Com tudo deve-se retornar a esta etapa quando necessário pois novos requisitos podem surgir ou se alterarem.
+
+A terceira etapa de “execução” se refere a etapa anterior de “Especificação”, os casos e roteiros de testes devem ser executados e seus resultados encontrados devem ser relatados.
+
+
+ A quarta etapa “Entrega” se refere a finalização do processo de teste onde serão entregues os resultados obtidos e os artefatos gerados durante todo o processo.
+ 
+ 
+As etapas de “Planejamento e Preparação” se dão ao longo de todo o projeto e são utilizadas de apoio, a preparação e basicamente responsável por preparar todo o ambiente de teste para que não haja obstáculos durante a execução, o planejamento é a atividade que permanece ativa durante todo o projeto para evitar desvios do objetivo principal.
+
+\section{VALIDAÇÃO DO PROJETO}
+
+% Esse é um teste\footnote{Esse é o exemplo de nota de rodaé.}.
+
+Esta atividade se resume em avaliar se os artefatos entregues atendem com eficiência as metas propostas, além de apontar possíveis melhorias. Para cada requisito do sistema deve ser possível produzir um ou mais casos de testes de caixa-preta \footnote{Teste de caixa-preta testes da interface do sistema, onde o funcionamento interno do sistema é desconhecido.} para verificar se o sistema cumpre o que foi projetado para fazer. Os testes definidos devem possuir um roteiro bem estruturado para validação do requisito, se não for possível a criação de um teste para um requisito será necessária uma melhor especificação deste requisito. Após os testes especificados estes serão executados por desenvolvedores e usuários para a validação do sistema. Ao final os testadores devem responder a um questionário fechado com perguntas pré-definidas. A partir do resultado do questionário serão levantados os pontos positivos e negativos do sistema, e possíveis melhorias podem ser acatadas.
