@@ -7,7 +7,7 @@ Nesta seção são apresentadas as tecnologias, ferramentas necessárias, os req
 
 \section{Manejo Integrado de Pragas (MIP)}
         
-O MIP tem como objetivo criar uma ferramenta capaz de auxiliar o constante monitoramento da lavoura, buscando manter a presença de pragas e doenças sempre abaixo do nível de dano à cultura, a estratégia não é eliminar completamento os agentes causadores de dano, mas reduzi-los a um ponto em que seus inimigos naturais presentes na plantação haajam sobre suas presas, favorecendo o equilíbrio natural desfeito pela plantação e pelo uso de defensores agrícolas. Para atingir seu objetivo a ferramenta depende de coletas de dados semanais coletados através da metodologia do pano-de-batida\footnote{Técnica de coleta pragas em lavouras.} para acompanhar o nível populacional das principais pragas da lavoura. 
+O MIP tem como objetivo criar uma ferramenta capaz de auxiliar o constante monitoramento da lavoura, buscando manter a presença de pragas e doenças sempre abaixo do nível de dano à cultura. A estratégia não é eliminar completamente os agentes causadores de dano, mas reduzi-los a um ponto em que seus inimigos naturais presentes na plantação hajam sobre suas presas, favorecendo o equilíbrio natural desfeito pela plantação e pelo uso de defensores agrícolas. Para atingir seu objetivo, a ferramenta depende de coletas de dados semanais coletados através da metodologia do pano-de-batida\footnote{Técnica de coleta pragas em lavouras.} para acompanhar o nível populacional das principais pragas da lavoura. 
 
 
 O sistema de coleta e análise de dados do MIP auxilia no acompanhamento das atividades de coleta e análise de dados das lavouras monitoradas pelo EMATER. O sistema também permite o gerenciamento de dados relacionados à coleta, como macrorregiões, regiões, produtores, safras, técnicos e pragas. 
@@ -17,7 +17,7 @@ O sistema de coleta e análise de dados do MIP auxilia no acompanhamento das ati
 
 
 \section{MODELO DO SISTEMA}
-Nesta seção, serão apresentados os requisitos funcionas e os principais artefatos gerados para o desenvolvimento da aplicação.
+Nesta seção, serão apresentados os requisitos funcionais e os principais artefatos gerados para o desenvolvimento da aplicação.
 
 \subsection{Requisitos Funcionais}
 Os requisitos são exigências, solicitações, desejos e necessidades que um software deve materializar. A Tabela \ref{tabela-requisitos} identifica os requisitos funcionais de forma abrangente.  
@@ -38,7 +38,7 @@ A Tabela \ref{especificacaoDosRequisitos} apresenta a descrição dos requisitos
 
 A Figura \ref{domain-base} representa as classes relacionadas a base do sistema. Funcionalidades de gerenciamento são apresentadas neste diagrama.
 	\includegraphics[scale=0.35]{dados/figuras/domain-base-classes.png}
-	\caption{Diagram de Classes Bases do Sistema.}
+	\caption{Diagrama de Classes Bases do Sistema.}
 	FONTE: \cite[https:~//github.com/gabrielcostasilva/emater-mip-datacollection-app/tree/DDDLike/mip/src/main/resources/UMLDiagrams]{gabriel}
 	\label{domain-base}
 \end{figure}
@@ -49,7 +49,7 @@ A FIGURA \ref{domain-survey} representa as classes relacionadas ao domínio das 
 
 \begin{figure}[h!]
 	\includegraphics[scale=0.3]{dados/figuras/domain-survey-classes.png}
-	\caption{Diagram de Classes Domínio da Pesquisa.}
+	\caption{Diagrama de Classes Domínio da Pesquisa.}
 	FONTE: \cite[https:~//github.com/gabrielcostasilva/emater-mip-datacollection-app/tree/DDDLike/mip/src/main/resources/UMLDiagrams]{gabriel}
 	\label{domain-survey}
 \end{figure}
@@ -62,7 +62,7 @@ A FIGURA \ref{domain-pest} representa as classes relacionadas a coleta de dados 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.35]{dados/figuras/domain-mip-classes.png}
-	\caption{Diagram de Classes Gerenciamento de Pragas.} 
+	\caption{Diagrama de Classes Gerenciamento de Pragas.} 
 	FONTE: \cite[https:~//github.com/gabrielcostasilva/emater-mip-datacollection-app/tree/DDDLike/mip/src/main/resources/UMLDiagrams]{gabriel}
 	\label{domain-pest}
 \end{figure}
@@ -80,32 +80,32 @@ testes do sistema.
 
 \subsection{JUnit}
 
-O  \textit{JUnit} é um \textit{framework} para plataforma Java que possibilita a criação de classes de teste unitário. Por se tratar de uma ferramenta bastante difundida possui integração com diversas plataformas e IDEs. Além de tudo, ele é um projeto \textit{opensource}\footnote{Software de código aberto produzido de forma publica e colaborativa ou liberado sob uma licença na qual o detentor dos direitos autorais concede aos usuários os direitos para estudar, alterar e distribuir o software.} e permite a que os teste sejam automatizados com apresentação de resultados. Os testes podem ser elaborados a partir dos requisitos do sistema ou casos de uso. 
+O  \textit{JUnit} é um \textit{framework} para plataforma Java que possibilita a criação de classes de teste unitário. Por se tratar de uma ferramenta bastante difundida possui integração com diversas plataformas e IDEs. Além de tudo, ele é um projeto \textit{opensource}\footnote{Software de código aberto produzido de forma pública e colaborativa ou liberado sob uma licença na qual o detentor dos direitos autorais concede aos usuários os direitos para estudar, alterar e distribuir o software.} e permite que os testes sejam automatizados com apresentação de resultados. Os testes podem ser elaborados a partir dos requisitos do sistema ou casos de uso. 
 
 
 Mais informações podem ser encontradas no capítulo 2 deste trabalho.
 
 \subsection{Mockito}
 
-O Mockito e um \textit{framework} de código aberto orientado a comportamento. Ele possibilita a simulação de comportamento de classes e interfaces facilitando a criação de testes que dependem de funcionalidades que ainda não foram implementadas. A ferramenta e bem difundida e possui integração com diferentes plataformas e IDEs. 
+O Mockito é um \textit{framework} de código aberto orientado a comportamento. Ele possibilita a simulação de comportamento de classes e interfaces facilitando a criação de testes que dependem de funcionalidades que ainda não foram implementadas. A ferramenta é bem difundida e possui integração com diferentes plataformas e IDEs. 
 
 Mais informações podem ser encontradas no capítulo 2 deste trabalho.
 
 \subsection{Spring Boot Test}
 
- Spring é um framework de código aberto, criado por Rod Johnson e possui o módulo de inicialização rápida, Spring Boot que é um projeto para facilitar o processo de configuração e publicação de aplicações \cite{spring}. O \textit{Spring Boot Test}  fornece suporte a testes de integração de forma fácil e simples. Através de anotações que o \textit{framework} disponibiliza e possível inicializar uma interface de conexão com o banco de dados permitindo a realização de testes de persistência e recuperação de dados.
+ Spring é um framework de código aberto, criado por Rod Johnson e possui o módulo de inicialização rápida. Spring Boot que é um projeto para facilitar o processo de configuração e publicação de aplicações \cite{spring}. O \textit{Spring Boot Test}  fornece suporte a testes de integração de forma fácil e simples. Através de anotações que o \textit{framework} disponibiliza é possível inicializar uma interface de conexão com o banco de dados permitindo a realização de testes de persistência e recuperação de dados.
 
 
 Mais informações podem ser encontradas no capítulo 2 deste trabalho.
 
 \subsection{IntelliJ IDEA}
 
-O ambiente de desenvolvimento integrado IntelliJ IDEA, desenvolvido pela JetBrains e um programa  para desenvolvimento de \textit{software} em varias linguagens que suporta várias tecnologias e \textit{frameworks}. O Intellij possui um decompilador\footnote{Realiza a operação inversa de um compilador, transformando código objeto em código fonte.}, que permite debugar\footnote{Método para procurar um erro em um trecho de código.} o código interno de classes desenvolvidas e códigos externo de bibliotecas que não possuem fonte. Ele também conta com recursos de conexão a banco de dados o que permite criar, alterar e excluir registros. Além de contar com a pesquisa rápida que permite a visualização e previsão de resultados, facilitando a interação com classes, bibliotecas e \textit{frameworks} \cite{intellij}.
+O ambiente de desenvolvimento integrado IntelliJ IDEA, desenvolvido pela JetBrains é um programa  para desenvolvimento de \textit{software} em várias linguagens que suporta várias tecnologias e \textit{frameworks}. O Intellij possui um decompilador\footnote{Realiza a operação inversa de um compilador, transformando código objeto em código fonte.}, que permite debugar\footnote{Método para procurar um erro em um trecho de código.} o código interno de classes desenvolvidas e códigos externo de bibliotecas que não possuem fonte. Ele também conta com recursos de conexão a banco de dados o que permitem criar, alterar e excluir registros. Além de contar com a pesquisa rápida que permite a visualização e previsão de resultados, facilitando a interação com classes, bibliotecas e \textit{frameworks} \cite{intellij}.
 
 
 \section{MÉTODO}
 
-O sistema de Manejo Integrado de Pragas e Doenças deverá ser submetido a testes de unidade, integração e aceitação. Os testes de unidade avaliarão isoladamente o banco de dados, as interfaces de comunicação, e todos os outros componentes do projeto. Os testes de integração testaram os componentes, previamente testados isoladamente, acoplados. O objetivo é identificar possíveis falhas nos acoplamentos. 
+O sistema de Manejo Integrado de Pragas e Doenças deverá ser submetido a testes de unidade e integração. Os testes de unidade avaliarão isoladamente o banco de dados, as interfaces de comunicação, e todos os outros componentes do projeto. Os testes de integração testarão os componentes, previamente testados isoladamente, acoplados. O objetivo é identificar possíveis falhas nos acoplamentos. 
 
 
 O processo de teste deve se basear em uma metodologia compatível com o processo de desenvolvimento e deve ser o guia básico para organizar a atividade de teste da aplicação. 
@@ -113,7 +113,7 @@ O processo de teste deve se basear em uma metodologia compatível com o processo
 
 \subsection{Modelo 3P x 3E}
 
-O modelo proposto é composto por diversas fases e etapas sendo duas em paralelo e quatro em sequência. As etapas em paralelo representam a preparação e o planejamento que devem estar presentes no projeto dês de sua concepção e fornece suporte para as demais etapas do processo. Procedimentos iniciais representam a menor parte do processo, a maior parte do processo deve se dedicar as etapas de especificação, execução e entrega \cite{riosMoreira}. A FIGURA \ref{modelo3p3e} apresenta o modelo.
+O modelo proposto é composto por diversas fases e etapas sendo duas em paralelo e quatro em sequência. As etapas em paralelo representam a preparação e o planejamento que devem estar presentes no projeto des de sua concepção e fornece suporte para as demais etapas do processo. Procedimentos iniciais representam a menor parte do processo, a maior parte do processo deve se dedicar as etapas de especificação, execução e entrega \cite{riosMoreira}. A FIGURA \ref{modelo3p3e} apresenta o modelo.
 
 
 \begin{figure}[H]
@@ -128,7 +128,7 @@ O modelo proposto é composto por diversas fases e etapas sendo duas em paralelo
 A primeira etapa “Procedimentos iniciais” propõe a análise e verificação dos requisitos para garantir que estes estejam completos e sem ambiguidades. Além disso o procedimento inicial deve conter as atividades que serão executadas ao longo de todo o desenvolvimento dos testes.
 
 
-A segunda etapa de “Especificação” consiste em elaboração de casos de teste e elaboração de roteiros de teste. Com tudo deve-se retornar a esta etapa quando necessário pois novos requisitos podem surgir ou se alterarem.
+A segunda etapa de “Especificação” consiste em elaboração de casos de teste e elaboração de roteiros de teste. Deve-se retornar a esta etapa quando necessário pois novos requisitos podem surgir ou se alterarem.
 
 A terceira etapa de “execução” se refere a etapa anterior de “Especificação”, os casos e roteiros de testes devem ser executados e seus resultados encontrados devem ser relatados.
 
@@ -136,10 +136,10 @@ A terceira etapa de “execução” se refere a etapa anterior de “Especifica
  A quarta etapa “Entrega” se refere a finalização do processo de teste onde serão entregues os resultados obtidos e os artefatos gerados durante todo o processo.
  
  
-As etapas de “Planejamento e Preparação” se dão ao longo de todo o projeto e são utilizadas de apoio, a preparação e basicamente responsável por preparar todo o ambiente de teste para que não haja obstáculos durante a execução, o planejamento é a atividade que permanece ativa durante todo o projeto para evitar desvios do objetivo principal.
+As etapas de “Planejamento e Preparação” se dão ao longo de todo o projeto e são utilizadas de apoio, a preparação é basicamente responsável por preparar todo o ambiente de teste para que não haja obstáculos durante a execução, o planejamento é a atividade que permanece ativa durante todo o projeto para evitar desvios do objetivo principal.
 
 \section{VALIDAÇÃO DO PROJETO}
 
 % Esse é um teste\footnote{Esse é o exemplo de nota de rodaé.}.
 
-Esta atividade se resume em avaliar se os artefatos entregues atendem com eficiência as metas propostas, além de apontar possíveis melhorias. Para cada requisito do sistema deve ser possível produzir um ou mais casos de testes de caixa-preta \footnote{Teste de caixa-preta testes da interface do sistema, onde o funcionamento interno do sistema é desconhecido.} para verificar se o sistema cumpre o que foi projetado para fazer. Os testes definidos devem possuir um roteiro bem estruturado para validação do requisito, se não for possível a criação de um teste para um requisito será necessária uma melhor especificação deste requisito. Após os testes especificados estes serão executados por desenvolvedores e usuários para a validação do sistema. Ao final os testadores devem responder a um questionário fechado com perguntas pré-definidas. A partir do resultado do questionário serão levantados os pontos positivos e negativos do sistema, e possíveis melhorias podem ser acatadas.
+Esta atividade se resume em avaliar se os artefatos entregues atendem com eficiência as metas propostas, além de apontar possíveis melhorias. Para cada requisito do sistema deve ser possível produzir um ou mais casos de testes de caixa-preta para verificar se o sistema cumpre o que foi projetado para fazer. Os testes definidos devem possuir um roteiro bem estruturado para validação do requisito, se não for possível a criação de um teste para um requisito será necessária uma melhor especificação deste requisito. Após os testes especificados estes serão executados por desenvolvedores e usuários para a validação do sistema. Ao final os testadores devem responder a um questionário fechado com perguntas pré-definidas. A partir do resultado do questionário serão levantados os pontos positivos e negativos do sistema, e possíveis melhorias podem ser acatadas.
